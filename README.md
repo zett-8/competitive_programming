@@ -1,5 +1,16 @@
 # Python tips for competitive programming
 
+## Rate color explanation
+|color  |rate  |description  |
+|---|---|---|
+|Gray  |1 - 400| Everyone starts from here. |
+|Brown  |400 - 800 | enough for a student, not enough for a programmer yet.  |
+|Green | 800 - 1200 | your algorithm skill is fair enough at most companies. This rating could be considered top level in other minor online judge. | 
+|Light blue | 1200 - 1600 | You are doubtlessly competent. Almost top level algorithm knowledge. | 
+|Blue | 1600 - 2000 | Algorithm specialist of sorts. Even some big companies don't have this level of programmers. | 
+|Yellow | 2000 - 2400 | A monster. A problem-solving machine. You can be an algorithm expert.  | 
+|Orange | 2400 - 2800 | Insane. |
+|Red | 2800 -| World class insane.|
 ## Input & Output
 #### Multiple inputs on a line
 ```python
@@ -107,7 +118,7 @@ print(s) #['a', 'b', 'c', '\n']
 - List comprehension
 
 ####  should use PyPY
-- 10^7 queue
+- Big queue like 10^7
 - Busy operation with 2D array
 - Tree problems
 - Graph problems
