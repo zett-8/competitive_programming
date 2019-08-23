@@ -161,6 +161,12 @@ try:
 except Exception:
     pass
 ```
+
+#### Use heapq as descending order
+```python
+heappush(h, -j)
+-heappop(h)
+```
 ## quotation
 - [AtCoderで使ってる入力メソッド(Python3)](https://qiita.com/fmhr/items/77fc453e2fb1bc02e392)
 - [AtCoder コンテストについての tips](https://qiita.com/drken/items/8a6f139158cde8a61dce)
