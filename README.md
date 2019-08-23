@@ -5,12 +5,12 @@
 |---|---|---|
 |Gray  |1 - 400| Everyone starts from here. |
 |Brown  |400 - 800 | enough for a student, not enough for a programmer yet.  |
-|Green | 800 - 1200 | your algorithm skill is fair enough at most companies. This rating could be considered top level in other minor online judge. | 
+|Green | 800 - 1200 | your algorithm skill is fair enough at most companies. <br /> This rating could be considered top level in other minor online judge. | 
 |Light blue | 1200 - 1600 | You are doubtlessly competent. Almost top level algorithm knowledge. | 
-|Blue | 1600 - 2000 | Algorithm specialist of sorts. Even some big companies don't have this level of programmers. | 
-|Yellow | 2000 - 2400 | A monster. A problem-solving machine. You can be an algorithm expert.  | 
+|Blue | 1600 - 2000 | Algorithm specialist of sorts.<br />Even some big companies don't have this level of programmers. | 
+|Yellow | 2000 - 2400 | A monster. A problem-solving machine.<br />You can be an algorithm expert.  | 
 |Orange | 2400 - 2800 | Insane. |
-|Red | 2800 -| World class insane.|
+|<font color="Red">Red</font> | 2800 -| World class insane.|
 ## Input & Output
 #### Multiple inputs on a line
 ```python
