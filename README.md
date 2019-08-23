@@ -38,10 +38,10 @@ e = [list(map(int, input().split())) for x in range(n)]
 #  [[22, 1, 45], [25, 53, 110], [4, 444, 555], [2, 5, 0]]
 ```
 ## Speeding Up
-#### Don't use <font color="Magenta">*del*</font>, <font color="Magenta">*insert*</font>'
+#### Don't use 'del', 'insert'
 #### Use 'tuple'
 #### 'sort()' is bit faster than 'sorted()'
-#### Put smaller loop in outside
+#### Put smaller loop outside
 ```python
 for i in range(n):
     for j in range(2):
@@ -56,7 +56,7 @@ for i in range(2):
         
 # 1923ms
 ```
-####Excute as main function
+#### Excute as main function
 ```python
 def main():
     """"write here"""
@@ -111,6 +111,56 @@ print(s) #['a', 'b', 'c', '\n']
 - Busy operation with 2D array
 - Tree problems
 - Graph problems
+
+## Other tips
+#### Initialize array
+```python
+[None] * N
+```
+
+#### sort
+```python
+A.sort(key=lambda x: x[1], reverse=True)
+A.sort(key=itemgetter(1))
+```
+
+#### Unleash limit of recursive call
+```python
+import sys
+sys.setrecursionlimit(10**6)
+```
+
+#### Deep copy
+```python
+from copy import deepcopy
+
+A=[1,2,3]
+B=deepcopy(A)
+B[1]=100
+
+# A = [1, 2, 3]
+# B = [1, 100, 3]
+```
+
+#### Finish program
+```python
+import sys
+
+sys.exit()
+```
+
+#### Get out off deep loop
+```python
+try:
+    for _ in range(10000):
+        for _ in range(10000):
+            for _ in range(10000):
+                print('finish!')
+                raise Exception
+
+except Exception:
+    pass
+```
 ## quotation
 - [AtCoderで使ってる入力メソッド(Python3)](https://qiita.com/fmhr/items/77fc453e2fb1bc02e392)
 - [AtCoder コンテストについての tips](https://qiita.com/drken/items/8a6f139158cde8a61dce)
