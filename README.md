@@ -38,7 +38,7 @@ e = [list(map(int, input().split())) for x in range(n)]
 #  [[22, 1, 45], [25, 53, 110], [4, 444, 555], [2, 5, 0]]
 ```
 ## Speeding Up
-#### Don't use 'del', 'insert'
+#### Don't use <font color="Magenta">*del*</font>, <font color="Magenta">*insert*</font>'
 #### Use 'tuple'
 #### 'sort()' is bit faster than 'sorted()'
 #### Put smaller loop in outside
