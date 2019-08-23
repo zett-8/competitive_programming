@@ -3,14 +3,14 @@
 ## Rate color explanation
 |color  |rate  |description  |
 |---|---|---|
-|Gray  |1 - 400| Everyone starts from here. |
-|Brown  |400 - 800 | enough for a student, not enough for a programmer yet.  |
-|Green | 800 - 1200 | your algorithm skill is fair enough at most companies. <br /> This rating could be considered top level in other minor online judge. | 
-|Light blue | 1200 - 1600 | You are doubtlessly competent. Almost top level algorithm knowledge. | 
-|Blue | 1600 - 2000 | Algorithm specialist of sorts.<br />Even some big companies don't have this level of programmers. | 
-|Yellow | 2000 - 2400 | A monster. A problem-solving machine.<br />You can be an algorithm expert.  | 
-|Orange | 2400 - 2800 | Insane. |
-|<font color="Red">Red</font> | 2800 -| World class insane.|
+|![#a9a9a9](https://placehold.it/15/a9a9a9/000000?text=+) Gray  |1 - 400| Everyone starts from here. |
+|![#8b4513](https://placehold.it/15/8b4513/000000?text=+) Brown  |400 - 800 | enough for a student, not enough for a programmer yet.  |
+|![#9acd32](https://placehold.it/15/9acd32/000000?text=+) Green | 800 - 1200 | your algorithm skill is fair enough at most companies. <br /> This rating could be considered top level in other minor online judge. | 
+|![#87cefa](https://placehold.it/15/87cefa/000000?text=+) Light blue | 1200 - 1600 | You are doubtlessly competent. Almost top level algorithm knowledge. | 
+|![#0000ff](https://placehold.it/15/0000ff/000000?text=+) Blue | 1600 - 2000 | Algorithm specialist of sorts.<br />Even some big companies don't have this level of programmers. | 
+|![#f0e68c](https://placehold.it/15/f0e68c/000000?text=+) Yellow | 2000 - 2400 | A monster. A problem-solving machine.<br />You can be an algorithm expert.  | 
+|![#f4a460](https://placehold.it/15/f4a460/000000?text=+) Orange | 2400 - 2800 | Insane. |
+|![#dc143c](https://placehold.it/15/dc143c/000000?text=+) Red | 2800 -| World class insane.|
 ## Input & Output
 #### Multiple inputs on a line
 ```python
