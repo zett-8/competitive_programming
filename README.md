@@ -1,6 +1,6 @@
 # Python tips for competitive programming
 
-## Rate color explanation
+## Rate color explanation of AtCoder****
 |color  |rate  |description  |
 |---|---|---|
 |![#a9a9a9](https://placehold.it/15/a9a9a9/000000?text=+) Gray  |1 - 400| Everyone starts from here. |
