@@ -178,6 +178,22 @@ except Exception:
 heappush(h, -j)
 -heappop(h)
 ```
+
+#### Calculate combination (select r from n)
+```python
+from operator import mul
+from functools import reduce
+
+def cmb(n, r):
+    r = min(n - r, r)
+
+    if r <= 0:
+        return 1
+
+    over = reduce(mul, range(n, n - r, -1))
+    under = reduce(mul, range(1, r + 1))
+    return over // under
+```
 ## quotation
 - [AtCoderで使ってる入力メソッド(Python3)](https://qiita.com/fmhr/items/77fc453e2fb1bc02e392)
 - [AtCoder コンテストについての tips](https://qiita.com/drken/items/8a6f139158cde8a61dce)
