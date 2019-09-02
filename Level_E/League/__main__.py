@@ -26,7 +26,7 @@ def main():
         played = deque()
         no_match = True
 
-        for p in range(len(players)):
+        for p in range(len(players)-1):
             main_p = p
 
             if main_p in played:
