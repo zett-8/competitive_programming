@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"math/big"
 	"os"
 	"strconv"
@@ -17,9 +18,9 @@ func nextLine() string {
 	return sc.Text()
 }
 
-func nextInt() int {
+func nextInt() uint64 {
 	sc.Scan()
-	i, e := strconv.Atoi(sc.Text())
+	i, e := strconv.ParseUint(sc.Text(), 10, 64)
 	if e != nil {
 		panic(e)
 	}
@@ -86,46 +87,44 @@ func descendSort(a []uint64) []uint64 {
 	return a
 }
 
+func maxAndIndex(a []uint64) (uint64, int) {
+	max := uint64(0)
+	ind := 0
+	for i, v := range a {
+		if v > max {
+			max = v
+			ind = i
+		}
+	}
+	return max, ind
+}
+
+func sum(a []uint64) uint64 {
+	sum := uint64(0)
+	for _, v := range a {
+		sum += v
+	}
+	return sum
+}
+
 func main() {
 	// sc.Split(bufio.ScanWords)
-	// strings.Split(nextLine(), " ")
+	NM := uint64Array(strings.Split(nextLine(), " "))
+	n := NM[0]
+	m := NM[1]
 
-	n := nextInt()
-	n = n + 1
-	t := uint64Array(strings.Split(nextLine(), " "))
+	stuff := uint64Array(strings.Split(nextLine(), " "))
 
-	// sort.Slice(s, func(x, y int) bool { return s[x] > s[y] })
-	s := descendSort(t)
-
-	var ans []uint64
-
-	ans = append(ans, s[0])
-	s = s[1:]
-
-	for len(s) > 0 {
-		var tmp []uint64
-
-		for _, parent := range ans {
-			ch := 0
-			for i, _ := range s {
-				if parent > s[i] {
-					child := s[i]
-					s = remove(s, i)
-					tmp = append(tmp, child)
-					ch = 1
-					break
-				}
-			}
-
-			if ch == 0 {
-				fmt.Println("No")
-				return
-			}
-		}
-
-		ans = append(ans, tmp...)
-		ans = descendSort(ans)
+	if n == 1 {
+		d := math.Pow(2, float64(m))
+		fmt.Println(uint64(math.Floor(float64(stuff[0]) / d)))
+		os.Exit(0)
 	}
 
-	fmt.Println("yes")
+	for i := uint64(0); i < m; i++ {
+		_, maxIndex := maxAndIndex(stuff)
+		stuff[maxIndex] = uint64(math.Floor(float64(stuff[maxIndex]) / float64(2)))
+	}
+
+	fmt.Println(sum(stuff))
 }
