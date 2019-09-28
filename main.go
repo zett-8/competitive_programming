@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"math"
 	"math/big"
 	"os"
 	"strconv"
@@ -55,6 +54,16 @@ func intExistIn(v int, arr []int) bool {
 	return false
 }
 
+func stringExistIn(v string, arr []string) bool {
+	for _, a := range arr {
+		if a == v {
+			return true
+		}
+	}
+
+	return false
+}
+
 func gcd(m, n uint64) uint64 {
 	x := new(big.Int)
 	y := new(big.Int)
@@ -62,6 +71,15 @@ func gcd(m, n uint64) uint64 {
 	a := new(big.Int).SetUint64(m)
 	b := new(big.Int).SetUint64(n)
 	return z.GCD(x, y, a, b).Uint64()
+}
+
+func uintArrayToStr(a []uint64) string {
+	var S string
+
+	for _, v := range a {
+		S += strconv.Itoa(int(v))
+	}
+	return S
 }
 
 func remove(x []uint64, y int) []uint64 {
@@ -72,6 +90,19 @@ func remove(x []uint64, y int) []uint64 {
 		}
 	}
 	return newArray
+}
+
+func ascendSort(a []uint64) []uint64 {
+	for i := 0; i < len(a); i++ {
+		for i := 0; i < len(a)-1; i++ {
+			if a[i] > a[i+1] {
+				tmp := a[i+1]
+				a[i+1] = a[i]
+				a[i] = tmp
+			}
+		}
+	}
+	return a
 }
 
 func descendSort(a []uint64) []uint64 {
@@ -89,14 +120,14 @@ func descendSort(a []uint64) []uint64 {
 
 func maxAndIndex(a []uint64) (uint64, int) {
 	max := uint64(0)
-	ind := 0
+	index := 0
 	for i, v := range a {
 		if v > max {
 			max = v
-			ind = i
+			index = i
 		}
 	}
-	return max, ind
+	return max, index
 }
 
 func sum(a []uint64) uint64 {
@@ -109,22 +140,20 @@ func sum(a []uint64) uint64 {
 
 func main() {
 	// sc.Split(bufio.ScanWords)
-	NM := uint64Array(strings.Split(nextLine(), " "))
-	n := NM[0]
-	m := NM[1]
+	N := int(nextInt())
+	nums := uint64Array(strings.Split(nextLine(), " "))
+	var ans uint64
 
-	stuff := uint64Array(strings.Split(nextLine(), " "))
+	ans = 0
 
-	if n == 1 {
-		d := math.Pow(2, float64(m))
-		fmt.Println(uint64(math.Floor(float64(stuff[0]) / d)))
+	for i := 0; i < N-1; i++ {
+		for x := i + 1; x < N; x++ {
+			ans += nums[i] * nums[x] / gcd(nums[i], nums[x])
+		}
+	}
+	if ans == 0 {
+		fmt.Println(0)
 		os.Exit(0)
 	}
-
-	for i := uint64(0); i < m; i++ {
-		_, maxIndex := maxAndIndex(stuff)
-		stuff[maxIndex] = uint64(math.Floor(float64(stuff[maxIndex]) / float64(2)))
-	}
-
-	fmt.Println(sum(stuff))
+	fmt.Println(ans % 998244353)
 }
