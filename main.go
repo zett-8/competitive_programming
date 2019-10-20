@@ -141,19 +141,19 @@ func sum(a []uint64) uint64 {
 func main() {
 	// sc.Split(bufio.ScanWords)
 	N := int(nextInt())
-	nums := uint64Array(strings.Split(nextLine(), " "))
-	var ans uint64
+	L := uint64Array(strings.Split(nextLine(), " "))
 
-	ans = 0
+	ans := 0
 
-	for i := 0; i < N-1; i++ {
-		for x := i + 1; x < N; x++ {
-			ans += nums[i] * nums[x] / gcd(nums[i], nums[x])
+	for a := 0; a < N; a++ {
+		for b := a + 1; b < N; b++ {
+			for c := b + 1; c < N; c++ {
+				if L[a] < L[b]+L[c] && L[b] < L[c]+L[a] && L[c] < L[a]+L[b] {
+					ans += 1
+				}
+			}
 		}
 	}
-	if ans == 0 {
-		fmt.Println(0)
-		os.Exit(0)
-	}
-	fmt.Println(ans % 998244353)
+
+	fmt.Println(ans)
 }
