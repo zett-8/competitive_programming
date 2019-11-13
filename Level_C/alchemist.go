@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math/big"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -39,6 +40,15 @@ func uint64Array(n []string) []uint64 {
 	var m []uint64
 	for i, _ := range n {
 		v, _ := strconv.ParseUint(n[i], 10, 64)
+		m = append(m, v)
+	}
+	return m
+}
+
+func float64Array(n []string) []float64 {
+	var m []float64
+	for i, _ := range n {
+		v, _ := strconv.ParseFloat(n[i], 10)
 		m = append(m, v)
 	}
 	return m
@@ -139,21 +149,17 @@ func sum(a []uint64) uint64 {
 }
 
 func main() {
-	// sc.Split(bufio.ScanWords)
-	N := int(nextInt())
-	L := uint64Array(strings.Split(nextLine(), " "))
+	_ = int(nextInt())
+	L := float64Array(strings.Split(nextLine(), " "))
 
-	ans := 0
-
-	for a := 0; a < N; a++ {
-		for b := a + 1; b < N; b++ {
-			for c := b + 1; c < N; c++ {
-				if L[a] < L[b]+L[c] && L[b] < L[c]+L[a] && L[c] < L[a]+L[b] {
-					ans += 1
-				}
-			}
+	for {
+		if len(L) == 1 {
+			break
 		}
+
+		sort.SliceStable(L, func(a, b int) bool { return L[a] < L[b] })
+		L = append(L[2:], (L[0]+L[1])/2)
 	}
 
-	fmt.Println(ans)
+	fmt.Println(L[0])
 }
