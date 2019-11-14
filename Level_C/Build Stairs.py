@@ -27,3 +27,21 @@ def main():
 if __name__ == '__main__':
     main()
 
+
+# def main():
+#     n = int(input())
+#     nums = list(map(int, input().split()))
+#
+#     for x in reversed(range(1, len(nums))):
+#         if nums[x-1] > nums[x]:
+#             nums[x-1] -= 1
+#
+#         if nums[x-1] > nums[x]:
+#             print('No')
+#             sys.exit()
+#
+#     print('Yes')
+
+
+if __name__ == '__main__':
+    main()
