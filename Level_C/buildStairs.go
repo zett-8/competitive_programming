@@ -11,6 +11,22 @@ import (
 
 var sc = bufio.NewScanner(os.Stdin)
 var out = bufio.NewWriter(os.Stdout)
+var rdr = bufio.NewReaderSize(os.Stdin, 1000000)
+
+func readLine() string {
+	buf := make([]byte, 0, 1000000)
+	for {
+		l, p, e := rdr.ReadLine()
+		if e != nil {
+			panic(e)
+		}
+		buf = append(buf, l...)
+		if !p {
+			break
+		}
+	}
+	return string(buf)
+}
 
 func nextLine() string {
 	sc.Scan()
@@ -138,8 +154,8 @@ func sum(a []uint64) uint64 {
 }
 
 func main() {
-	_ = int(nextInt())
-	L := uint64Array(strings.Split(nextLine(), " "))
+	_ = readLine()
+	L := uint64Array(strings.Split(readLine(), " "))
 
 	for i := len(L) - 1; i > 0; i-- {
 		if L[i-1] > L[i] {

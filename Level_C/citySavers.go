@@ -11,6 +11,22 @@ import (
 
 var sc = bufio.NewScanner(os.Stdin)
 var out = bufio.NewWriter(os.Stdout)
+var rdr = bufio.NewReaderSize(os.Stdin, 1000000)
+
+func readLine() string {
+	buf := make([]byte, 0, 1000000)
+	for {
+		l, p, e := rdr.ReadLine()
+		if e != nil {
+			panic(e)
+		}
+		buf = append(buf, l...)
+		if !p {
+			break
+		}
+	}
+	return string(buf)
+}
 
 func nextLine() string {
 	sc.Scan()
@@ -26,15 +42,6 @@ func nextInt() uint64 {
 	return i
 }
 
-func intArray(n []string) []int {
-	var m []int
-	for i, _ := range n {
-		v, _ := strconv.Atoi(n[i])
-		m = append(m, v)
-	}
-	return m
-}
-
 func int64Array(n []string) []int64 {
 	var m []int64
 	for i, _ := range n {
@@ -44,13 +51,12 @@ func int64Array(n []string) []int64 {
 	return m
 }
 
-func uint64Array(n []string) []uint64 {
-	var m []uint64
-	for i, _ := range n {
-		v, _ := strconv.ParseUint(n[i], 10, 64)
-		m = append(m, v)
+func uint64Array(arr []string) (newArr []uint64) {
+	for i, _ := range arr {
+		n, _ := strconv.ParseUint(arr[i], 10, 64)
+		newArr = append(newArr, n)
 	}
-	return m
+	return
 }
 
 func intExistIn(v int, arr []int) bool {
@@ -157,9 +163,9 @@ func defeat(count *int64, hero *int64, monster *int64) {
 
 func main() {
 	// sc.Split(bufio.ScanWords)
-	N := int(nextInt())
-	monsters := int64Array(strings.Split(nextLine(), " "))
-	heroes := int64Array(strings.Split(nextLine(), " "))
+	N, _ := strconv.Atoi(readLine())
+	monsters := int64Array(strings.Split(readLine(), " "))
+	heroes := int64Array(strings.Split(readLine(), " "))
 
 	var count int64
 

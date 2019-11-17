@@ -1,17 +1,30 @@
-package main
-
+//package main
 //
 //import (
 //	"bufio"
-//	"fmt"
 //	"math/big"
 //	"os"
 //	"strconv"
-//	"strings"
 //)
 //
 //var sc = bufio.NewScanner(os.Stdin)
 //var out = bufio.NewWriter(os.Stdout)
+//var rdr = bufio.NewReaderSize(os.Stdin, 1000000)
+//
+//func readLine() string {
+//	buf := make([]byte, 0, 1000000)
+//	for {
+//		l, p, e := rdr.ReadLine()
+//		if e != nil {
+//			panic(e)
+//		}
+//		buf = append(buf, l...)
+//		if !p {
+//			break
+//		}
+//	}
+//	return string(buf)
+//}
 //
 //func nextLine() string {
 //	sc.Scan()
@@ -36,13 +49,12 @@ package main
 //	return m
 //}
 //
-//func uint64Array(n []string) []uint64 {
-//	var m []uint64
-//	for i, _ := range n {
-//		v, _ := strconv.ParseUint(n[i], 10, 64)
-//		m = append(m, v)
+//func uint64Array(arr []string) (newArr []uint64) {
+//	for i, _ := range arr {
+//		n, _ := strconv.ParseUint(arr[i], 10, 64)
+//		newArr = append(newArr, n)
 //	}
-//	return m
+//	return
 //}
 //
 //func intExistIn(v int, arr []int) bool {
@@ -140,7 +152,5 @@ package main
 //}
 //
 //func main() {
-//	// sc.Split(bufio.ScanWords)
-//	N := int(nextInt())
-//	L := uint64Array(strings.Split(nextLine(), " "))
+//	_ = readLine()
 //}
