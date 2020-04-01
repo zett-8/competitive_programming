@@ -15,23 +15,7 @@ sys.setrecursionlimit(20000000)
 
 
 def main():
-    s = input()
-    ans = 0
-    n = 0
-    if len(s) % 2:
-        n = int((len(s) - 1) / 2)
-    else:
-        n = int(len(s) / 2)
-
-    a = s[:n]
-    b = s[-n:]
-    b = b[::-1]
-
-    for i in range(n):
-        if a[i] != b[i]:
-            ans += 1
-
-    print(ans)
+    pass
 
 
 if __name__ == '__main__':
