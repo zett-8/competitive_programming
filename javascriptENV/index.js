@@ -29,16 +29,18 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = 'https://atcoder.jp/contests/abc164/tasks/abc164_a'
+const url = 'https://atcoder.jp/contests/abc164/tasks/abc164_d'
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 const main = (input) => {
-  const [s, w] = input.trim().split(' ').map(v => parseInt(v, 10))
+  const s = input.trim()
 
-  s <= w ? console.log('unsafe') : console.log('safe')
+  
+
+  console.log(new Set(v).size)
 }
 
 process.env.MYTEST ? test() : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
