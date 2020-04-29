@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "init": "node util.js",
     "test": "MYTEST=test node ."
   },
   "author": "",

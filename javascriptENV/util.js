@@ -1,4 +1,6 @@
-const request = require('request')
+const fs = require('fs')
+
+const temp = `const request = require('request')
 const cheerio = require('cheerio')
 
 const test = () => {
@@ -14,11 +16,11 @@ const test = () => {
     })
 
     for (let [i, v] of test_input.entries()) {
-      console.log(`------ Test case ${i + 1} ------`)
+      console.log(\`------ Test case \${i + 1} ------\`)
 
       console.time()
       main(v)
-      console.log(`[32m${test_output[i]}[0m`)
+      console.log(\`\x1b[32m\${test_output[i]}\x1b[0m\`)
       console.timeEnd()
       console.log('----------------------------')
 
@@ -44,3 +46,6 @@ process.env.MYTEST ? test() : main(require('fs').readFileSync('/dev/stdin', 'utf
 
 // ======================================================================================================
 // ======================================================================================================
+`
+
+fs.writeFile('index.js', temp, () => console.log('made'))
