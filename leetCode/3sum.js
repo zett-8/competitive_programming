@@ -34,3 +34,7 @@ var threeSum = function(nums) {
   }
   return ans
 }
+
+/**
+ *   O(N ^ 2) solution
+ */
