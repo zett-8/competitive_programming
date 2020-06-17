@@ -1,3 +1,5 @@
+![bigO](https://github.com/Zett-8/images/blob/master/big-o-graph.png)
+
 # Python tips for competitive programming
 
 ## Rate color explanation of AtCoder
