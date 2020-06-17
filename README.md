@@ -1,8 +1,8 @@
 ![bigO](https://github.com/Zett-8/images/blob/master/big-o-graph.png)
 
-# Python tips for competitive programming
 
-## Rate color explanation of AtCoder
+
+# Rate color explanation of AtCoder
 |color  |rate  |description  |
 |---|---|---|
 |![#a9a9a9](https://placehold.it/15/a9a9a9/000000?text=+) Gray  |1 - 400| Everyone starts from here. |
@@ -13,6 +13,8 @@
 |![#f0e68c](https://placehold.it/15/f0e68c/000000?text=+) Yellow | 2000 - 2400 | A monster. A problem-solving machine.<br />You can be an algorithm expert.  | 
 |![#f4a460](https://placehold.it/15/f4a460/000000?text=+) Orange | 2400 - 2800 | Insane. |
 |![#dc143c](https://placehold.it/15/dc143c/000000?text=+) Red | 2800 -| World class insane.|
+# Python tips for competitive programming
+
 ## Input & Output
 #### Multiple inputs on a line
 ```python
