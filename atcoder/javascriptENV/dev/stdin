@@ -1,1 +1,102 @@
-475255
+- When Deadly_Nightshade dips below 0.75 and arsenic dips below 0.49, whilst at the same time, cyanide dips below 0.32 or Nerve_Gas goes above 0.75, decrease methylene by 0.05
+	- If sarin dips below 0.64 and snakeVenom dips below 0.42, whilst at the same time, insecticide dips below 0.5 or formaldehyde dips below 0.36, try increasing methylene by 0.01
+	- If Deadly_Nightshade dips below 0.28 or sarin dips below 0.26, whilst at the same time, arsenic goes above 0.27 or cyanide dips below 0.32, reduce insulin by 0.04
+	- When either formaldehyde dips below 0.29, Nerve_Gas goes above 0.65, or perhaps snakeVenom dips below 0.33, increment insulin by 0.03
+	- If formaldehyde dips below 0.68 and Nerve_Gas dips below 0.52, or on the other hand, snakeVenom dips below 0.36, decrement protamine by 0.03
+	- When insecticide dips below 0.25 and Deadly_Nightshade dips below 0.43, whilst at the same time, sarin goes above 0.46 or arsenic goes above 0.67, increase protamine by 0.05
+	- If sarin goes above 0.55 or arsenic dips below 0.66, whilst at the same time, snakeVenom dips below 0.36 or Nerve_Gas dips below 0.42, decrement charcoal by 0.01
+	- If cyanide goes above 0.58 and insecticide goes above 0.36, or on the other hand, formaldehyde goes above 0.4 and Deadly_Nightshade goes above 0.48, raise charcoal by 0.05
+	- If formaldehyde goes above 0.66 and Deadly_Nightshade goes above 0.51, or on the other hand, Nerve_Gas dips below 0.42 and insecticide goes above 0.48, try decreasing glucagon by 0.03
+	- If snakeVenom dips below 0.73 or cyanide dips below 0.57, or on the other hand, arsenic dips below 0.38 and sarin goes above 0.28, increase glucagon by 0.02
+
+
+Your conditional statements should:
+
+consider the following poisons:
+
+	- formaldehyde
+	- snakeVenom
+	- arsenic
+	- insecticide
+	- sarin
+	- cyanide
+	- Nerve_Gas
+	- Deadly_Nightshade
+
+
+and modify the following antidotes:
+
+	- methylene
+	- insulin
+	- protamine
+	- charcoal
+	- glucagon
+
+
+- There are many ways to complete this task but you should only use the
+following commands:
+
+	if(){}
+	+=
+	-=
+
+*/
+
+//Declare the poison variables
+var formaldehyde;
+var snakeVenom;
+var arsenic;
+var insecticide;
+var sarin;
+var cyanide;
+var Nerve_Gas;
+var Deadly_Nightshade;
+
+
+//Declare the antidote variables
+var methylene;
+var insulin;
+var protamine;
+var charcoal;
+var glucagon;
+
+
+//This variable is used for drawing the graph
+var graphs;
+
+
+function setup()
+{
+
+	createCanvas(800,600);
+	strokeWeight(2);
+
+	//initialise the poisons and antidotes
+	formaldehyde = 0.5;
+	snakeVenom = 0.5;
+	arsenic = 0.5;
+	insecticide = 0.5;
+	sarin = 0.5;
+	cyanide = 0.5;
+	Nerve_Gas = 0.5;
+	Deadly_Nightshade = 0.5;
+	methylene = 0.5;
+	insulin = 0.5;
+	protamine = 0.5;
+	charcoal = 0.5;
+	glucagon = 0.5;
+
+
+	//fills the graph with empty values
+	graphs = [];
+
+	for(var i = 0; i < 8; i++)
+	{
+		graphs.push([]);
+		for(var j = 0; j < 512; j++)
+		{
+			graphs[i].push(0.5);
+		}
+	}
+
+}
