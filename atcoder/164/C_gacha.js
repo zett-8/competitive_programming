@@ -29,14 +29,18 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = ''
+const url = 'https://atcoder.jp/contests/abc164/tasks/abc164_c'
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 const main = (input) => {
-  const s = input.trim()
+  const [, ...rows] = input.trim().split('\n')
+  const ans = {}
+
+  for (let v of rows) ans[v] = true
+  return console.log(Object.keys(ans).length)
 }
 
 process.env.MYTEST ? test() : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
