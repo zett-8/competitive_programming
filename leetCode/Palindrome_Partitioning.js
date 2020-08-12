@@ -34,9 +34,7 @@ const partition = (s) => {
     if (c === s.length) ans.push(arr)
 
     for (let end=c; end<s.length; end++) {
-      if (isPalindrome(c, end)) {
-        r(end+1, [...arr, s.slice(c, end+1)])
-      }
+      if (isPalindrome(c, end)) r(end+1, [...arr, s.slice(c, end+1)])
     }
   }
   r(0, [])
