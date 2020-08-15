@@ -4,7 +4,7 @@ const cheerio = require('cheerio')
 const test = () => {
   request(url, (error, response, body) => {
     if (error) return console.log(error)
-    body = `
+body = `
 
 
 
@@ -16,7 +16,7 @@ const test = () => {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>C - Repsept</title>
+	<title>B - Making Triangle</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="Content-Language" content="ja">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -29,23 +29,23 @@ const test = () => {
 
 	<meta property="og:site_name" content="AtCoder">
 	
-	<meta property="og:title" content="C - Repsept" />
+	<meta property="og:title" content="B - Making Triangle" />
 	<meta property="og:description" content="プログラミング初級者から上級者まで楽しめる、競技プログラミングコンテストサイト「AtCoder」。オンラインで毎週開催プログラミングコンテストを開催しています。競技プログラミングを用いて、客観的に自分のスキルを計ることのできるサービスです。" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://atcoder.jp/contests/abc174/tasks/abc174_c" />
+	<meta property="og:url" content="https://atcoder.jp/contests/abc175/tasks/abc175_b" />
 	<meta property="og:image" content="https://img.atcoder.jp/assets/atcoder.png" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@atcoder" />
 	
-	<meta property="twitter:title" content="C - Repsept" />
+	<meta property="twitter:title" content="B - Making Triangle" />
 
 	<link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="//img.atcoder.jp/public/bee38eb/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="//img.atcoder.jp/public/bee38eb/css/base.css">
+	<link rel="stylesheet" type="text/css" href="//img.atcoder.jp/public/3293349/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//img.atcoder.jp/public/3293349/css/base.css">
 	<link rel="shortcut icon" type="image/png" href="//img.atcoder.jp/assets/favicon.png">
 	<link rel="apple-touch-icon" href="//img.atcoder.jp/assets/atcoder.png">
-	<script src="//img.atcoder.jp/public/bee38eb/js/lib/jquery-1.9.1.min.js"></script>
-	<script src="//img.atcoder.jp/public/bee38eb/js/lib/bootstrap.min.js"></script>
+	<script src="//img.atcoder.jp/public/3293349/js/lib/jquery-1.9.1.min.js"></script>
+	<script src="//img.atcoder.jp/public/3293349/js/lib/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
@@ -54,17 +54,17 @@ const test = () => {
 		var userScreenName = "zett";
 		var csrfToken = "viP0ilkT545XtbNTw/QeLOED2ADd707K9RqbYYOuRX4="
 	</script>
-	<script src="//img.atcoder.jp/public/bee38eb/js/utils.js"></script>
+	<script src="//img.atcoder.jp/public/3293349/js/utils.js"></script>
 	
 	
-		<script src="//img.atcoder.jp/public/bee38eb/js/contest.js"></script>
-		<link href="//img.atcoder.jp/public/bee38eb/css/contest.css" rel="stylesheet" />
+		<script src="//img.atcoder.jp/public/3293349/js/contest.js"></script>
+		<link href="//img.atcoder.jp/public/3293349/css/contest.css" rel="stylesheet" />
 		<script>
-			var contestScreenName = "abc174";
+			var contestScreenName = "abc175";
 			var remainingText = "残り時間";
 			var countDownText = "開始まであと";
-			var startTime = moment("2020-08-02T21:00:00+09:00");
-			var endTime = moment("2020-08-02T22:40:00+09:00");
+			var startTime = moment("2020-08-15T21:00:00+09:00");
+			var endTime = moment("2020-08-15T22:40:00+09:00");
 		</script>
 		<style></style>
 	
@@ -76,12 +76,12 @@ const test = () => {
 	
 		<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
 		<link href="//cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" rel="stylesheet" />
-		<script src="//img.atcoder.jp/public/bee38eb/js/lib/select2.min.js"></script>
+		<script src="//img.atcoder.jp/public/3293349/js/lib/select2.min.js"></script>
 	
 	
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.js"></script>
-		<script src="//img.atcoder.jp/public/bee38eb/js/codeMirror/merged.js"></script>
+		<script src="//img.atcoder.jp/public/3293349/js/codeMirror/merged.js"></script>
 	
 	
 		<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -95,8 +95,8 @@ const test = () => {
 	
 	
 	
-	<script src="//img.atcoder.jp/public/bee38eb/js/base.js"></script>
-	<script src="//img.atcoder.jp/public/bee38eb/js/ga.js"></script>
+	<script src="//img.atcoder.jp/public/3293349/js/base.js"></script>
+	<script src="//img.atcoder.jp/public/3293349/js/ga.js"></script>
 </head>
 
 <body>
@@ -116,11 +116,11 @@ const test = () => {
 				<h4 class="modal-title">コンテスト開始</h4>
 			</div>
 			<div class="modal-body">
-				<p>AtCoder Beginner Contest 174が開始されました。</p>
+				<p>AtCoder Beginner Contest 175が開始されました。</p>
 			</div>
 			<div class="modal-footer">
 				
-					<a class="btn btn-primary" href='/contests/abc174/tasks'>問題一覧ページへ移動</a>
+					<a class="btn btn-primary" href='/contests/abc175/tasks'>問題一覧ページへ移動</a>
 				
 			</div>
 		</div>
@@ -134,7 +134,7 @@ const test = () => {
 				<h4 class="modal-title">コンテスト終了</h4>
 			</div>
 			<div class="modal-body">
-				<p>AtCoder Beginner Contest 174は終了しました。</p>
+				<p>AtCoder Beginner Contest 175は終了しました。</p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
@@ -156,7 +156,7 @@ const test = () => {
 			<div class="collapse navbar-collapse" id="navbar-collapse">
 				<ul class="nav navbar-nav">
 				
-					<li><a class="contest-title" href="/contests/abc174">AtCoder Beginner Contest 174</a></li>
+					<li><a class="contest-title" href="/contests/abc175">AtCoder Beginner Contest 175</a></li>
 				
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -166,8 +166,8 @@ const test = () => {
 							<img src='//img.atcoder.jp/assets/top/img/flag-lang/ja.png'> 日本語 <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="/contests/abc174/tasks/abc174_c?lang=ja"><img src='//img.atcoder.jp/assets/top/img/flag-lang/ja.png'> 日本語</a></li>
-							<li><a href="/contests/abc174/tasks/abc174_c?lang=en"><img src='//img.atcoder.jp/assets/top/img/flag-lang/en.png'> English</a></li>
+							<li><a href="/contests/abc175/tasks/abc175_b?lang=ja"><img src='//img.atcoder.jp/assets/top/img/flag-lang/ja.png'> 日本語</a></li>
+							<li><a href="/contests/abc175/tasks/abc175_b?lang=en"><img src='//img.atcoder.jp/assets/top/img/flag-lang/en.png'> English</a></li>
 						</ul>
 					</li>
 					
@@ -196,7 +196,7 @@ const test = () => {
 		</div>
 	</nav>
 
-	<form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Fcontests%2Fabc174%2Ftasks%2Fabc174_c">
+	<form method="POST" name="form_logout" action="/logout?continue=https%3A%2F%2Fatcoder.jp%2Fcontests%2Fabc175%2Ftasks%2Fabc175_b">
 		<input type="hidden" name="csrf_token" value="viP0ilkT545XtbNTw/QeLOED2ADd707K9RqbYYOuRX4=" />
 	</form>
 	<div id="main-container" class="container"
@@ -209,24 +209,24 @@ const test = () => {
 		<small class="contest-duration">
 			
 				コンテスト時間:
-				<a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200802T2100&p1=248' target='blank'><time class='fixtime fixtime-full'>2020-08-02 21:00:00+0900</time></a> ~ <a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200802T2240&p1=248' target='blank'><time class='fixtime fixtime-full'>2020-08-02 22:40:00+0900</time></a> 
+				<a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200815T2100&p1=248' target='blank'><time class='fixtime fixtime-full'>2020-08-15 21:00:00+0900</time></a> ~ <a href='http://www.timeanddate.com/worldclock/fixedtime.html?iso=20200815T2240&p1=248' target='blank'><time class='fixtime fixtime-full'>2020-08-15 22:40:00+0900</time></a> 
 				(100分)
 			
 		</small>
 		<small class="back-to-home pull-right"><a href="/home">AtCoderホームへ戻る</a></small>
 	</div>
 	<ul class="nav nav-tabs">
-		<li><a href="/contests/abc174"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> トップ</a></li>
+		<li><a href="/contests/abc175"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> トップ</a></li>
 		
-			<li class="active"><a href="/contests/abc174/tasks"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> 問題</a></li>
-		
-
-		
-			<li><a href="/contests/abc174/clarifications"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> 質問 <span id="clar-badge" class="badge"></span></a></li>
+			<li class="active"><a href="/contests/abc175/tasks"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> 問題</a></li>
 		
 
 		
-			<li><a href="/contests/abc174/submit?taskScreenName=abc174_c"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> 提出</a></li>
+			<li><a href="/contests/abc175/clarifications"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> 質問 <span id="clar-badge" class="badge"></span></a></li>
+		
+
+		
+			<li><a href="/contests/abc175/submit?taskScreenName=abc175_b"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> 提出</a></li>
 		
 
 		
@@ -235,9 +235,9 @@ const test = () => {
 				<ul class="dropdown-menu">
 					
 					
-						<li><a href="/contests/abc174/submissions/me"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 自分の提出</a></li>
+						<li><a href="/contests/abc175/submissions/me"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 自分の提出</a></li>
 						<li class="divider"></li>
-						<li><a href="/contests/abc174/score"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> 自分の得点状況</a></li>
+						<li><a href="/contests/abc175/score"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> 自分の得点状況</a></li>
 					
 				</ul>
 			</li>
@@ -246,13 +246,13 @@ const test = () => {
 		
 			
 				
-					<li><a href="/contests/abc174/standings"><span class="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span> 順位表</a></li>
+					<li><a href="/contests/abc175/standings"><span class="glyphicon glyphicon-sort-by-attributes-alt" aria-hidden="true"></span> 順位表</a></li>
 				
 			
 		
 
 		
-			<li><a href="/contests/abc174/custom_test"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> コードテスト</a></li>
+			<li><a href="/contests/abc175/custom_test"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> コードテスト</a></li>
 		
 
 		
@@ -262,8 +262,10 @@ const test = () => {
 	</ul>
 </div>
 	<div class="col-sm-12">
-		<span class="h2">C - Repsept</span>
-		
+		<span class="h2">
+			B - Making Triangle
+			
+		</span>
 		<span id="task-lang-btn" class="pull-right"><span data-lang="ja"><img src='//img.atcoder.jp/assets/top/img/flag-lang/ja.png'></span> / <span data-lang="en"><img src='//img.atcoder.jp/assets/top/img/flag-lang/en.png'></span></span>
 		<script>
 			$(function() {
@@ -300,33 +302,41 @@ const test = () => {
 			});
 		</script>
 		<hr/>
-		<p>実行時間制限: 2 sec / メモリ制限: 1024 MB</p>
+		<p>
+			実行時間制限: 2 sec / メモリ制限: 1024 MB
+			
+		</p>
 
 		<div id="task-statement">
 			
 	<div class="alert alert-warning alert-dismissible fade in">
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<p>2020/08/02 22:40:00 まで、問題の内容・感想・解法などをSNS上に投稿することは<a href="/contests/abc174/rules" target="_blank">ルール</a>に違反する行為です。</p>
+		<p>2020/08/15 22:40:00 まで、問題の内容・感想・解法などをSNS上に投稿することは<a href="/contests/abc175/rules" target="_blank">ルール</a>に違反する行為です。</p>
 		<p>どのような投稿がルールに違反するかはこちらの<a href="/posts/262" target="_blank">記事</a>もお読みください。</p>
 	</div>
 
 			<span class="lang">
 <span class="lang-ja">
-<p>配点 : <var>300</var> 点</p>
+<p>配点 : <var>200</var> 点</p>
 
 <div class="part">
 <section>
-<h3>問題文</h3><p>高橋君は <var>K</var> の倍数と <var>7</var> が好きです。</p>
-<p><var>7,77,777,\\ldots</var> という数列の中に初めて <var>K</var> の倍数が登場するのは何項目ですか？</p>
-<p>存在しない場合は代わりに <code>-1</code> を出力してください。</p>
+<h3>問題文</h3><p><var>1, \\cdots, N</var> の番号がついた <var>N</var> 本の棒があります。棒 <var>i (1 \\leq i \\leq N)</var> の長さは <var>L_i</var> です。</p>
+<p>このうち、三角形を作ることのできるような長さの異なる <var>3</var> 本の棒を選ぶ方法は何通りあるでしょうか。</p>
+<p>つまり、<var>3</var> つの整数 <var>1 \\leq i &lt; j &lt; k \\leq N</var> の組であって次の <var>2</var> つの条件の両方を満たすものの個数を求めてください。</p>
+<ul>
+<li><var>L_i, L_j, L_k</var> がすべて異なる</li>
+<li><var>3</var> 辺の長さが <var>L_i, L_j, L_k</var> であるような三角形が存在する</li>
+</ul>
 </section>
 </div>
 
 <div class="part">
 <section>
 <h3>制約</h3><ul>
-<li><var>1 \\leq K \\leq 10^6</var></li>
-<li><var>K</var> は整数である。</li>
+<li><var>1 \\leq N \\leq 100</var></li>
+<li><var>1 \\leq L_i \\leq 10^9</var></li>
+<li>入力は全て整数である</li>
 </ul>
 </section>
 </div>
@@ -336,7 +346,8 @@ const test = () => {
 <div class="part">
 <section>
 <h3>入力</h3><p>入力は以下の形式で標準入力から与えられる。</p>
-<pre><var>K</var>
+<pre><var>N</var>
+<var>L_1</var> <var>L_2</var> <var>\\cdots</var> <var>L_N</var>
 </pre>
 
 </section>
@@ -344,7 +355,7 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>出力</h3><p>答えを整数として出力せよ。</p>
+<h3>出力</h3><p>三角形を作ることのできるような、長さの異なる <var>3</var> 本の棒を選ぶ方法の個数を出力せよ。</p>
 </section>
 </div>
 </div>
@@ -352,7 +363,8 @@ const test = () => {
 <hr />
 <div class="part">
 <section>
-<h3>入力例 1</h3><pre>101
+<h3>入力例 1</h3><pre>5
+4 4 9 7 5
 </pre>
 
 </section>
@@ -360,35 +372,18 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>出力例 1</h3><pre>4
+<h3>出力例 1</h3><pre>5
 </pre>
 
-<p><var>7,77,777</var> は <var>101</var> の倍数ではありませんが、<var>7777</var> は <var>101</var> の倍数です。</p>
-</section>
-</div>
-
-<hr />
-<div class="part">
-<section>
-<h3>入力例 2</h3><pre>2
-</pre>
-
-</section>
-</div>
-
-<div class="part">
-<section>
-<h3>出力例 2</h3><pre>-1
-</pre>
-
-<p>数列の値は全て奇数なので、<var>2</var> の倍数が登場することはありません。</p>
+<p>条件を満たすような <var>(i, j, k)</var> は、<var>(1, 3, 4), (1, 4, 5), (2, 3, 4), (2, 4, 5), (3, 4, 5)</var> の <var>5</var> 個があります。</p>
 </section>
 </div>
 
 <hr />
 <div class="part">
 <section>
-<h3>入力例 3</h3><pre>999983
+<h3>入力例 2</h3><pre>6
+4 5 4 3 3 5
 </pre>
 
 </section>
@@ -396,26 +391,71 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>出力例 3</h3><pre>999982
-</pre></section>
+<h3>出力例 2</h3><pre>8
+</pre>
+
+<p>長さ <var>3, 4, 5</var> の棒が <var>2</var> 本ずつあります。<var>1</var> つ目の条件を満たすためにはそれぞれから <var>1</var> 本ずつ選ぶしかありません。</p>
+<p><var>3</var> 辺の長さが <var>3, 4, 5</var> の三角形は存在するので、条件を満たすような <var>(i, j, k)</var> は <var>2 ^ 3 = 8</var> 個あります。</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 3</h3><pre>10
+9 4 6 1 9 6 10 6 6 8
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 3</h3><pre>39
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>入力例 4</h3><pre>2
+1 1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>出力例 4</h3><pre>0
+</pre>
+
+<p><var>1 \\leq i &lt; j &lt; k \\leq N</var> を満たす <var>(i, j, k)</var> が存在しないので、<var>0</var> を出力してください。</p></section>
 </div>
 </span>
 <span class="lang-en">
-<p>Score : <var>300</var> points</p>
+<p>Score : <var>200</var> points</p>
 
 <div class="part">
 <section>
-<h3>Problem Statement</h3><p>Takahashi loves the number <var>7</var> and multiples of <var>K</var>.</p>
-<p>Where is the first occurrence of a multiple of <var>K</var> in the sequence <var>7,77,777,\\ldots</var>? (Also see Output and Sample Input/Output below.)</p>
-<p>If the sequence contains no multiples of <var>K</var>, print <code>-1</code> instead.</p>
+<h3>Problem Statement</h3><p>We have sticks numbered <var>1, \\cdots, N</var>. The length of Stick <var>i</var> <var>(1 \\leq i \\leq N)</var> is <var>L_i</var>.</p>
+<p>In how many ways can we choose three of the sticks with different lengths that can form a triangle?</p>
+<p>That is, find the number of triples of integers <var>(i, j, k)</var> <var>(1 \\leq i &lt; j &lt; k \\leq N)</var> that satisfy both of the following conditions:</p>
+<ul>
+<li><var>L_i</var>, <var>L_j</var>, and <var>L_k</var> are all different.</li>
+<li>There exists a triangle whose sides have lengths <var>L_i</var>, <var>L_j</var>, and <var>L_k</var>.</li>
+</ul>
 </section>
 </div>
 
 <div class="part">
 <section>
 <h3>Constraints</h3><ul>
-<li><var>1 \\leq K \\leq 10^6</var></li>
-<li><var>K</var> is an integer.</li>
+<li><var>1 \\leq N \\leq 100</var></li>
+<li><var>1 \\leq L_i \\leq 10^9</var></li>
+<li>All values in input are integers.</li>
 </ul>
 </section>
 </div>
@@ -425,7 +465,8 @@ const test = () => {
 <div class="part">
 <section>
 <h3>Input</h3><p>Input is given from Standard Input in the following format:</p>
-<pre><var>K</var>
+<pre><var>N</var>
+<var>L_1</var> <var>L_2</var> <var>\\cdots</var> <var>L_N</var>
 </pre>
 
 </section>
@@ -433,7 +474,7 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>Output</h3><p>Print an integer representing the position of the first occurrence of a multiple of <var>K</var>. (For example, if the first occurrence is the fourth element of the sequence, print <code>4</code>.)</p>
+<h3>Output</h3><p>Print the number of ways to choose three of the sticks with different lengths that can form a triangle.</p>
 </section>
 </div>
 </div>
@@ -441,7 +482,8 @@ const test = () => {
 <hr />
 <div class="part">
 <section>
-<h3>Sample Input 1</h3><pre>101
+<h3>Sample Input 1</h3><pre>5
+4 4 9 7 5
 </pre>
 
 </section>
@@ -449,35 +491,18 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>Sample Output 1</h3><pre>4
+<h3>Sample Output 1</h3><pre>5
 </pre>
 
-<p>None of <var>7</var>, <var>77</var>, and <var>777</var> is a multiple of <var>101</var>, but <var>7777</var> is.</p>
-</section>
-</div>
-
-<hr />
-<div class="part">
-<section>
-<h3>Sample Input 2</h3><pre>2
-</pre>
-
-</section>
-</div>
-
-<div class="part">
-<section>
-<h3>Sample Output 2</h3><pre>-1
-</pre>
-
-<p>All elements in the sequence are odd numbers; there are no multiples of <var>2</var>.</p>
+<p>The following five triples <var>(i, j, k)</var> satisfy the conditions: <var>(1, 3, 4)</var>, <var>(1, 4, 5)</var>, <var>(2, 3, 4)</var>, <var>(2, 4, 5)</var>, and <var>(3, 4, 5)</var>.</p>
 </section>
 </div>
 
 <hr />
 <div class="part">
 <section>
-<h3>Sample Input 3</h3><pre>999983
+<h3>Sample Input 2</h3><pre>6
+4 5 4 3 3 5
 </pre>
 
 </section>
@@ -485,8 +510,48 @@ const test = () => {
 
 <div class="part">
 <section>
-<h3>Sample Output 3</h3><pre>999982
-</pre></section>
+<h3>Sample Output 2</h3><pre>8
+</pre>
+
+<p>We have two sticks for each of the lengths <var>3</var>, <var>4</var>, and <var>5</var>. To satisfy the first condition, we have to choose one from each length.</p>
+<p>There is a triangle whose sides have lengths <var>3</var>, <var>4</var>, and <var>5</var>, so we have <var>2 ^ 3 = 8</var> triples <var>(i, j, k)</var> that satisfy the conditions.</p>
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>Sample Input 3</h3><pre>10
+9 4 6 1 9 6 10 6 6 8
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 3</h3><pre>39
+</pre>
+
+</section>
+</div>
+
+<hr />
+<div class="part">
+<section>
+<h3>Sample Input 4</h3><pre>2
+1 1
+</pre>
+
+</section>
+</div>
+
+<div class="part">
+<section>
+<h3>Sample Output 4</h3><pre>0
+</pre>
+
+<p>No triple <var>(i, j, k)</var> satisfies <var>1 \\leq i &lt; j &lt; k \\leq N</var>, so we should print <var>0</var>.</p></section>
 </div>
 </span>
 </span>
@@ -497,8 +562,8 @@ const test = () => {
 
 		
 		<hr/>
-		<form class="form-horizontal form-code-submit" action="/contests/abc174/submit" method="POST">
-			<input type="hidden" name="data.TaskScreenName" value="abc174_c" />
+		<form class="form-horizontal form-code-submit" action="/contests/abc175/submit" method="POST">
+			<input type="hidden" name="data.TaskScreenName" value="abc175_b" />
 			
 			<div class="form-group ">
 				<label class="control-label col-sm-2" for="select-lang">言語</label>
@@ -693,7 +758,7 @@ const test = () => {
 			
 			
 			
-<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/contests/abc174/tasks/abc174_c?lang=ja" data-a2a-title="C - Repsept">
+<div class="a2a_kit a2a_kit_size_20 a2a_default_style pull-right" data-a2a-url="https://atcoder.jp/contests/abc175/tasks/abc175_b?lang=ja" data-a2a-title="B - Making Triangle">
 	<a class="a2a_button_facebook"></a>
 	<a class="a2a_button_twitter"></a>
 	
@@ -713,8 +778,8 @@ const test = () => {
 			<footer class="footer">
 			
 				<ul>
-					<li><a href="/contests/abc174/rules">ルール</a></li>
-					<li><a href="/contests/abc174/glossary">用語集</a></li>
+					<li><a href="/contests/abc175/rules">ルール</a></li>
+					<li><a href="/contests/abc175/glossary">用語集</a></li>
 					
 				</ul>
 			
@@ -763,25 +828,34 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = 'https://atcoder.jp/contests/abc174/tasks/abc174_c'
+const url = 'https://atcoder.jp/contests/abc175/tasks/abc175_b'
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 const main = (input) => {
-  const s = parseInt(input.trim(), 10)
-  if (s < 7 || s % 2 === 0) return console.log(-1)
+  input = input.trim().split('\n')
+  const n = parseInt(input[0], 10)
+  const logs = input[1].split(' ').map(Number).sort((a, b) => a - b)
+
+  let ans = 0
+
+  const r = (idx, cur, count, nums) => {
+    if (count === 3) {
+      ans++
+      return null
+    }
+
+    if (idx > logs.length-1) return null
 
 
-  let seven = '7'
-
-  while (true) {
-    if (parseInt(seven) % s === 0)
-      return console.log(seven.length)
-
-    seven += '7'
+    if (!nums.includes(logs[idx])) r(idx+1, [...cur, idx], count+1, [...nums, logs[idx]])
+    r(idx+1, cur, count, nums)
   }
+  r(0, [], 0, [])
+
+  return console.log(ans)
 }
 
 process.env.MYTEST ? test() : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
