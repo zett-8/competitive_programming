@@ -29,15 +29,19 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = 'https://atcoder.jp/contests/abc176/tasks/abc176_a'
+const url = 'https://atcoder.jp/contests/abc176/tasks/abc176_b'
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 const main = (input) => {
-  const [n, x, t] = input.trim().split(' ').map(Number)
-  return console.log(Math.ceil(n/x) * t)
+  const n = input.trim()
+
+  let ans = 0
+  for (let v of n) ans += parseInt(v, 10)
+
+  return console.log(ans % 9 === 0 ? 'Yes' : 'No')
 }
 
 process.env.MYTEST ? test() : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
