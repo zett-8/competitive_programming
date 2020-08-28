@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "init": "node util.js",
-    "test": "MYTEST=test node ."
+    "test": "MYTEST=test node .",
+    "test-single": "MYTEST=single node ."
   },
   "author": "",
   "license": "ISC",
