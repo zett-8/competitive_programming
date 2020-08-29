@@ -28,15 +28,3 @@ class UnionFind {
     return this.findSet(this.p[x])
   }
 }
-
-// ============ test ================
-
-
-const uf = new UnionFind(6)
-
-
-uf.unite(1, 2)
-uf.unite(3, 4)
-uf.unite(5, 1)
-console.log(uf.size)
-
