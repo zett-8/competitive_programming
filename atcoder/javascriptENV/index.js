@@ -820,49 +820,49 @@ const url = 'https://atcoder.jp/contests/abc177/tasks/abc177_d'
 // ======================================================================================================
 // ======================================================================================================
 
+class UnionFind {
+  constructor(n) {
+    this.p = new Array(n).fill(null).map((_, i) => i)
+    this.height = new Array(n).fill(0)
+    this.size = new Array(n).fill(1)
+  }
+
+  unite(a, b) {
+    this.link(this.findSet(a), this.findSet(b))
+  }
+
+  link(a, b) {
+    if (a === b) return null
+
+    if (this.height[a] > this.height[b]) {
+      this.p[b] = a
+      this.size[a] += this.size[b]
+    } else {
+      this.p[a] = b
+      this.size[b] += this.size[a]
+
+      if (this.height[a] === this.height[b]) {
+        this.height[b]++
+      }
+    }
+  }
+
+  findSet(x) {
+    if (this.p[x] === x) return x
+    return this.findSet(this.p[x])
+  }
+}
 
 const main = (input) => {
   input = input.trim().split('\n')
   const [n,] = input.shift().split(' ').map(Number)
   input = Array.from(new Set(input))
 
-  const ans = []
+  const uf = new UnionFind(n+1)
 
-  for (let i=0; i<input.length; i++) {
-    const [a, b] = input[i].split(' ')
+  for (let i=0; i<input.length; i++) uf.unite(...input[i].split(' ').map(Number))
 
-    for (let s=0; s<ans.length; s++) {
-      if (ans[s].has(a) || ans[s].has(b)) {
-        ans[]
-      }
-    }
-  }
-
-  // const friends = new Array(n+1).fill(null).map(() => [])
-  //
-  // for (let i=0; i<input.length; i++) {
-  //   const [a, b] = input[i].split(' ')
-  //
-  //   // add B to A
-  //   if (friends[a].length) {
-  //     for (let v=0; v<friends[a].length; v++) {
-  //       const anotherFriendIdx = friends[a][v]
-  //       if (!friends[anotherFriendIdx].includes(b) && b !== anotherFriendIdx) friends[anotherFriendIdx].push(b)
-  //     }
-  //   }
-  //   if (!friends[a].includes(b) && a !== b) friends[a].push(b)
-  //
-  //   // add A to B
-  //   if (friends[b].length) {
-  //     for (let v=0; v<friends[b].length; v++) {
-  //       const anotherFriendIdx = friends[b][v]
-  //       if (!friends[anotherFriendIdx].includes(a) && anotherFriendIdx !== a) friends[anotherFriendIdx].push(a)
-  //     }
-  //   }
-  //   if (!friends[b].includes(a) && b !== a) friends[b].push(a)
-  // }
-  //
-  // return console.log(Math.max(...friends.map(v => v.length)) + 1)
+  return console.log(uf.size.reduce((a, b) => Math.max(a, (b || 0)), 0))
 }
 
 process.env.MYTEST
