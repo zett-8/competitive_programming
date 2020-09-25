@@ -1,30 +1,29 @@
 const main = (input) => {
   const mod = 998244353n
-  const [f, ...q] = input.trim().split('\n')
+  const [f, ..._q] = input.trim().split('\n')
   const [n,] = f.split(' ').map(Number)
+  const q = _q.map(v => v.split(' ').map(Number))
 
-  const _s = {}
-  for (let i=0; i<q.length; i++) {
-    const [a, b] = q[i].split(' ').map(Number)
+  const dp = new Array(n+1).fill(0n)
+  const dpSum = new Array(n+1).fill(0n)
+  dp[1] = 1n
+  dpSum[1] = 1n
 
-    for (let x=a; x<=b; x++) _s[x]++
-  }
+  for (let i=2; i<=n; i++) {
+    let tmp = 0n
 
-  const s = Array.from(Object.keys(_s)).sort((a, b) => a - b)
+    for (let x=0; x<q.length; x++) {
+      const [a, b] = q[x]
 
-  const arr = new Array(n+1).fill(0n)
-  arr[1] = 1n
+      // if (i-a <= 0) break
 
-  for (let i=1; i<n; i++) {
-    if (arr[i] === 0n) continue
-
-    for (let x=0; x<s.length; x++) {
-      const p = Number(s[x])
-
-      if (arr[i+p] !== undefined) arr[i+p] += arr[i]
-      else break
+      if (dpSum[i-a] < dpSum[i-(b+1)]) continue
+      tmp += (dpSum[i-a] || 0n) - (dpSum[i-(b+1)] || 0n)
     }
+
+    dp[i] = tmp % mod
+    dpSum[i] = dpSum[i-1] + dp[i]
   }
 
-  return console.log(`${(arr[n] % mod + mod) % mod}`)
+  return console.log(`${(dp[n] % mod + mod) % mod}`)
 }
