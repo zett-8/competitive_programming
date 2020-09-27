@@ -29,17 +29,14 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = 'https://atcoder.jp/contests/abl/tasks/abl_b'
+const url = ''
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 const main = (input) => {
-  const [a, b, c, d] = input.trim().split(' ').map(Number)
-
-  if (b < c || a > d) return console.log('No')
-  else return console.log('Yes')
+  const s = input.trim()
 }
 
 process.env.MYTEST
