@@ -25,7 +25,6 @@ class NumArray {
 
   update(i, v) {
     const diff = v - this.seg[i+this.n-1]
-    // this.seg[i] = v
 
     for (let x=i+this.n-1; x>=0; x=Math.floor((x-1)/2)) {
       this.seg[x] += diff
