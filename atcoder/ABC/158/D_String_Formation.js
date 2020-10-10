@@ -9,15 +9,12 @@ const main = (input) => {
   for (let i=0; i<qn; i++) {
     const [a, b, c] = q[i].split(' ')
 
-    if (a === '1') {
-      cnv = !cnv
-    } else {
-      if ((b === '1' && !cnv) || (b === '2' && cnv)) {
-        s = c + s
-      } else {
-        s = s + c
-      }
-    }
+    if (a === '1') cnv = !cnv
+
+    if (b && (b === '1' && !cnv) || (b === '2' && cnv))
+      s = c + s
+    else if (b && (b === '2' && !cnv) || (b === '1' && cnv))
+      s = s + c
   }
 
   return console.log(cnv ? s.split('').reverse().join('') : s)
