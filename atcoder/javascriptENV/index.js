@@ -35,6 +35,8 @@ const url = ''
 // ======================================================================================================
 
 
+console.__proto__.mod = function(v, mod) { console.log((v%mod+mod) % mod) }
+
 const main = (input) => {
   const s = input.trim()
 }
