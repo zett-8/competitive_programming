@@ -29,16 +29,22 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = ''
+const url = 'https://atcoder.jp/contests/abc156/tasks/abc156_d'
 
 // ======================================================================================================
 // ======================================================================================================
 
 
 console.__proto__.mod = function(v, mod) { console.log((v%mod+mod) % mod) }
+const mod = 10**9 + 7
+const modPow = (n, p, mod) => { [n, p, mod] = [n, p, mod].map(BigInt); if (p === 0n) return 1; if (p === 1n) return Number(n); if (p % 2n === 1n) { return Number(BigInt(modPow(n, (p-1n)/2n, mod)) ** 2n * n % mod) } else { return Number(BigInt(modPow(n, p/2n, mod)) ** 2n % mod) }}
 
 const main = (input) => {
-  const s = input.trim()
+  const [n, a, b] = input.trim().split(' ').map(Number)
+
+  const ans = modPow(2, n, mod) - 1
+
+  
 }
 
 process.env.MYTEST
