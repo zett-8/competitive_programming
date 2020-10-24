@@ -37,7 +37,8 @@ const url = ''
 // ======================================================================================================
 
 
-console.__proto__.mod = function(v, mod) { console.log((v%mod+mod) % mod) }
+const mod = 10**9 + 7
+const mlog = (v) => { console.log((v%mod+mod) % mod) }
 
 const main = (input) => {
   const s = input.trim()
