@@ -37,14 +37,29 @@ const url = 'https://atcoder.jp/contests/abc156/tasks/abc156_d'
 
 console.__proto__.mod = function(v, mod) { console.log((v%mod+mod) % mod) }
 const mod = 10**9 + 7
-const modPow = (n, p, mod) => { [n, p, mod] = [n, p, mod].map(BigInt); if (p === 0n) return 1; if (p === 1n) return Number(n); if (p % 2n === 1n) { return Number(BigInt(modPow(n, (p-1n)/2n, mod)) ** 2n * n % mod) } else { return Number(BigInt(modPow(n, p/2n, mod)) ** 2n % mod) }}
+const modPow = (n, p, mod=Infinity) => { [n, p, mod] = [n, p, mod].map(BigInt); if (p === 0n) return 1; if (p === 1n) return Number(n); if (p % 2n === 1n) { return Number(BigInt(modPow(n, (p-1n)/2n, mod)) ** 2n * n % mod) } else { return Number(BigInt(modPow(n, p/2n, mod)) ** 2n % mod) }}
+
+const nCr = (n, r, mod) => {
+  n = BigInt(n)
+  r = BigInt(r)
+  mod = mod && BigInt(mod)
+
+  let a = 1n, b = 1n
+  for (let i=0n; i<r; i+=1n) {
+    a *= n-i
+    b *= r-i
+  }
+
+  return mod ? Number(a / b % mod) : Number(a / b)
+}
+
 
 const main = (input) => {
   const [n, a, b] = input.trim().split(' ').map(Number)
 
   const ans = modPow(2, n, mod) - 1
 
-  
+  console.log(ans - nCr(n, a, mod) - nCr(n, b, mod))
 }
 
 process.env.MYTEST
