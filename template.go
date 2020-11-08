@@ -78,7 +78,7 @@ package main
 //	return false
 //}
 //
-//func gcd(m, n uint64) uint64 {
+//func gcd_and_lcm(m, n uint64) uint64 {
 //	x := new(big.Int)
 //	y := new(big.Int)
 //	z := new(big.Int)

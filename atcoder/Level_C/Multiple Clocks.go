@@ -45,7 +45,7 @@ func intExistIn(v int, arr []int) bool {
 	return false
 }
 
-func gcd(m, n uint64) uint64 {
+func gcd_and_lcm(m, n uint64) uint64 {
 	x := new(big.Int)
 	y := new(big.Int)
 	z := new(big.Int)
@@ -70,7 +70,7 @@ func main() {
 		tmp := nums[0:2]
 		nums = nums[2:]
 
-		x := gcd(uint64(tmp[0]), uint64(tmp[1]))
+		x := gcd_and_lcm(uint64(tmp[0]), uint64(tmp[1]))
 		mx := uint64(tmp[0]) / x * uint64(tmp[1])
 
 		nums = append(nums, int(mx))
