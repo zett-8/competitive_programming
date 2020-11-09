@@ -7,18 +7,12 @@ const main = (input) => {
   const n = Number(input[0])
   const q = input[1].split(' ').map(Number)
 
-  let l = q[0]
+  let l = BigInt(q[0])
 
-  for (let i=1; i<n; i++) {
-    l = lcm(l, q[i])
-  }
+  for (let i=1; i<n; i++) l = lcm(l, BigInt(q[i]))
 
-  let ans = 0
-  for (let i=0; i<n; i++) ans = (ans + Number(l / q[i])) % mod
+  let ans = 0n
+  for (let i=0; i<n; i++) ans = (ans + l / BigInt(q[i])) % BigInt(mod)
 
-  console.log(ans)
+  return console.log(`${ans}`)
 }
-
-process.env.MYTEST
-  ? (process.env.MYTEST === 'test' ? test() : main(require('fs').readFileSync('dev/stdin', 'utf8')))
-  : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
