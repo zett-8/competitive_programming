@@ -19,7 +19,7 @@ const test = () => {
       console.log(\`------ Test case \${i + 1} ------\`)
 
       console.time()
-      main(v)
+      console.log(main(v))
       console.log(\`\x1b[32m\${test_output[i]}\x1b[0m\`)
       console.timeEnd()
       console.log('----------------------------')
@@ -45,8 +45,8 @@ const main = (input) => {
 }
 
 process.env.MYTEST
-  ? (process.env.MYTEST === 'test' ? test() : main(require('fs').readFileSync('dev/stdin', 'utf8')))
-  : main(require('fs').readFileSync('/dev/stdin', 'utf8'))
+  ? (process.env.MYTEST === 'test' ? test() : console.log(main(require('fs').readFileSync('dev/stdin', 'utf8'))))
+  : console.log(main(require('fs').readFileSync('/dev/stdin', 'utf8')))
 
 
 // ======================================================================================================
