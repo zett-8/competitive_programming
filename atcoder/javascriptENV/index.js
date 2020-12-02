@@ -36,7 +36,7 @@ const url = ''
 
 
 const mod = 10**9 + 7
-const mlog = (v) => { console.log((v%mod+mod) % mod) }
+const mlog = (v) => `${(v % mod + mod) % mod}`
 
 const main = (input) => {
   const s = input.trim()
