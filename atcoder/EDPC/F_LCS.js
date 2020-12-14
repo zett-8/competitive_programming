@@ -14,6 +14,7 @@ const main = (input) => {
 
   for (let ans='', y=s.length, x=t.length; true;) {
     if (dp[y][x] === 0) return console.log(ans)
+      
     else if (dp[y][x] === dp[y][x-1]) x--
     else if (dp[y][x] === dp[y-1][x]) y--
     else {
