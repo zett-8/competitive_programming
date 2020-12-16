@@ -4,7 +4,6 @@ const cheerio = require('cheerio')
 const test = () => {
   request(url, (error, response, body) => {
     if (error) return console.log(error)
-    body = body || ``
     
     const html = cheerio.load(body)
     const test_input = []
