@@ -39,7 +39,7 @@ const mod = 10**9 + 7
 const mlog = (v) => `${(v % mod + mod) % mod}`
 
 const main = (input) => {
-  const s = input.trim()
+  input = input.trim()
 }
 
 process.env.MYTEST
