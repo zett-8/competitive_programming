@@ -4,13 +4,14 @@ const cheerio = require('cheerio')
 const test = () => {
   request(url, (error, response, body) => {
     if (error) return console.log(error)
-    
+
     const html = cheerio.load(body)
     const test_input = []
     const test_output = []
 
-    html('#task-statement >span >span:first-child >div.part pre').each((i,e) => {
-      i % 2 ? test_output.push(e.children[0].data) : test_input.push(e.children[0].data)
+    html('.div-btn-copy + pre').each((i,e) => {
+      console.log(e)
+      i % 2 ? test_output.push(e.children[0]?.data) : test_input.push(e.children[0]?.data)
     })
 
     for (let [i, v] of test_input.entries()) {
@@ -29,7 +30,7 @@ const test = () => {
 }
 
 // TODO: set url for test
-const url = ''
+const url = 'https://atcoder.jp/contests/abc191/tasks/abc191_b'
 
 // ======================================================================================================
 // ======================================================================================================
@@ -39,7 +40,9 @@ const mod = 10**9 + 7
 const mlog = (v) => `${(v % mod + mod) % mod}`
 
 const main = (input) => {
-  input = input.trim()
+  const [n, x] = input.trim().split('\n')
+
+  return n.split(' ').filter(v => v !== x).join(' ')
 }
 
 process.env.MYTEST
