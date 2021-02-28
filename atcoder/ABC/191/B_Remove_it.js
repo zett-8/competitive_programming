@@ -4,4 +4,4 @@ const main = (input) => {
   const arr = input[1].split(' ')
 
   return arr.filter(v => v !== x).join(' ')
-}.log(main(require('fs').readFileSync('/dev/stdin', 'utf8')))
+}
