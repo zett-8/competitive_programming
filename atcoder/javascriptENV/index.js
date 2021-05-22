@@ -4,13 +4,9 @@ const cheerio = require('cheerio')
 const test = () => {
   const test_input = [
     // 1
-    `5 5
-3 5 6 5 4
-`,
+    ``,
     // 2
-    `3 3
-3 3 3
-`,
+    ``,
     // 3
     ``,
     // 4
@@ -20,11 +16,9 @@ const test = () => {
   ]
   const test_output = [
     // 1
-    `3 6 4
-`,
+    ``,
     // 2
-    `
-    `,
+    ``,
     // 3
     ``,
     // 4
@@ -32,10 +26,10 @@ const test = () => {
     // 5
     ``,
   ]
-
+  
   for (let [i, v] of test_input.entries()) {
-    if (!v) return null
-
+    if (!v) return
+  
     console.log(`------ Test case ${i + 1} ------`)
 
     console.time()
@@ -49,8 +43,6 @@ const test = () => {
   }
 }
 
-// TODO: set url for test
-const url = ''
 
 // ======================================================================================================
 // ======================================================================================================
@@ -60,11 +52,7 @@ const mod = 10**9 + 7
 const mlog = (v) => `${(v % mod + mod) % mod}`
 
 const main = (input) => {
-  input = input.trim().split('\n')
-  const [, x] = input[0].split(' ')
-  const arr = input[1].split(' ')
-
-  return arr.filter(v => v !== x).join(' ')
+  input = input.trim()
 }
 
 process.env.MYTEST
