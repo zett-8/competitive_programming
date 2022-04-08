@@ -1,9 +1,6 @@
 const fs = require('fs')
 
-const temp = `const request = require('request')
-const cheerio = require('cheerio')
-
-const test = () => {
+const temp = `const test = () => {
   const test_input = [
     // 1
     \`\`,
