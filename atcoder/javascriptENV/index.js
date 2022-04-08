@@ -1,6 +1,3 @@
-const request = require('request')
-const cheerio = require('cheerio')
-
 const test = () => {
   const test_input = [
     // 1
@@ -26,10 +23,10 @@ const test = () => {
     // 5
     ``,
   ]
-  
+
   for (let [i, v] of test_input.entries()) {
     if (!v) return
-  
+
     console.log(`------ Test case ${i + 1} ------`)
 
     console.time()
