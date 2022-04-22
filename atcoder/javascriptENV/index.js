@@ -52,8 +52,8 @@ const main = (input) => {
   input = input.trim()
 }
 
-process.env.MYTEST
-  ? (process.env.MYTEST === 'test' ? test() : console.log(main(require('fs').readFileSync('dev/stdin', 'utf8'))))
+process.env.MYTEST && process.env.MYTEST === 'test' 
+  ? test() 
   : console.log(main(require('fs').readFileSync('/dev/stdin', 'utf8')))
 
 
