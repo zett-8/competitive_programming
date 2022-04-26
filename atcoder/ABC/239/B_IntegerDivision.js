@@ -18,3 +18,10 @@ const main = (input) => {
     }
   }
 }
+
+const main = (input) => {
+  input = input.trim()
+  const x = BigInt(input)
+
+  return `${x < 0n ? input[input.length-1] === '0' ? x / 10n : x / 10n - 1n : x / 10n}`
+}
