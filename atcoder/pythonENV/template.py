@@ -64,6 +64,9 @@ output4
         input_ = test_cases[i][0]
         expect = test_cases[i][1].lstrip()
 
+        if not input_:
+            continue
+
         f = open('testcase', 'w', encoding='utf-8')
         f.write(input_.lstrip())
         f = open('testcase', 'r')
