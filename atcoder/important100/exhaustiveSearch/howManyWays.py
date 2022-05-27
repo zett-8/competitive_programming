@@ -1,3 +1,5 @@
+# https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ITP1_7_B&lang=ja
+
 import sys
 import math
 from copy import deepcopy
