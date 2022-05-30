@@ -30,34 +30,34 @@ def test():
     test_cases = [
         [
 '''
-input1
+input_1
 ''',
 '''
-output1
+output_1
 '''
         ],
         [
 '''
-input2
+input_2
 ''',
 '''
-output2
+output_2
 '''
         ],
         [
 '''
-input3
+input_3
 ''',
 '''
-output3
+output_3
 '''
         ],
         [
 '''
-input4
+input_4
 ''',
 '''
-output4
+output_4
 '''
         ],
     ]
@@ -68,7 +68,7 @@ output4
         input_ = test_cases[i][0]
         expect = test_cases[i][1].lstrip()
 
-        if not input_:
+        if not input_ or 'input_' in input_:
             continue
 
         f = open('testcase', 'w', encoding='utf-8')
@@ -103,4 +103,3 @@ output4
 
     if not wrong:
         print('\033[32m' + 'ALL CLEAR!!!' + '\033[0m')
-
