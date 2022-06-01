@@ -2,20 +2,15 @@ import subprocess
 import os
 import time
 
-
 # ===============
 # Submit bellow
 # ===============
 
 import sys
+import builtins
 import math
-from copy import deepcopy
-from collections import deque, defaultdict
-from operator import mul
-from functools import reduce
-sys.setrecursionlimit(20000000)
-
-# input = sys.stdin.readline
+builtins.input = sys.stdin.readline
+sys.setrecursionlimit(10**7)
 
 
 def main():

@@ -7,10 +7,10 @@ import time
 # ===============
 
 import sys
+import builtins
 import math
-sys.setrecursionlimit(20000000)
-
-# input = sys.stdin.readline
+builtins.input = sys.stdin.readline
+sys.setrecursionlimit(10**7)
 
 
 def main():
