@@ -9,8 +9,8 @@ import time
 import sys
 import builtins
 import math
-builtins.input = sys.stdin.readline
 sys.setrecursionlimit(10**7)
+builtins.input = lambda: sys.stdin.readline().strip()
 
 
 def main():
