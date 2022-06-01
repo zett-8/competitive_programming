@@ -1,11 +1,3 @@
-import subprocess
-import os
-import time
-
-# ===============
-# Submit bellow
-# ===============
-
 import sys
 import builtins
 import math
@@ -56,6 +48,10 @@ output_4
 '''
         ],
     ]
+
+    import subprocess
+    import os
+    import time
 
     wrong = 0
 
