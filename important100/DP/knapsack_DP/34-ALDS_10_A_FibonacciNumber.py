@@ -1,6 +1,6 @@
 # https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_10_A&lang=ja
-import sys
 
+import sys
 import builtins
 import math
 sys.setrecursionlimit(10**7)
