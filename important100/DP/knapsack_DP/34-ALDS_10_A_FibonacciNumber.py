@@ -9,11 +9,7 @@ builtins.input = lambda: sys.stdin.readline().strip()
 
 def main():
     N = int(input())
-
-    dp = [0] * max(2, (N+1))
-
-    dp[0] = 1
-    dp[1] = 1
+    dp = [1] * max(2, (N+1))
 
     for i in range(2, len(dp)):
         dp[i] = dp[i-1] + dp[i-2]
